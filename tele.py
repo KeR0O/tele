@@ -10,12 +10,12 @@ t = '2086501602:AAHWXZ1yNZKXU1DDf7dX6X8RjzbiXZbPAwc'
 message = requests.get("https://api.telegram.org/bot"+str(t)+"/sendMessage?chat_id="+str(k)+"&text= ⌔ New Start! ").json()
 id_msg = str(message['result']["message_id"])
 print('- '*9)
-oh = 'QWERTYUIOPLKJHGFDSAZXCVBNM'
-op = '0987654321KKKOOOOPPPSBSVVSJSHJSSISSHSSBSSJSS'
+oh = 'qwertyuiopasdfghjklzxcvbnm1234567890'
+op = 'qwertyuiopasdfghjklzxcvbnm1234567890'
 while True :
     ok = str("".join(random.choice(oh)for i in range(1)))
     on = str("".join(random.choice(op)for i in range(1)))
-    os = ok+ok+on+on+on
+    os = ok+ok+ok +'_'+ok+on
     oa = requests.get(f'https://t.me/{os}').text
     if 'tgme_username_link' in oa:
         print(f'\r [{kn}] : DonE  ')
