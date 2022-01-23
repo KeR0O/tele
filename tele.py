@@ -15,7 +15,7 @@ op = 'qwertyuiopasdfghjklzxcvbnm1234567890'
 while True :
     ok = str("".join(random.choice(oh)for i in range(1)))
     on = str("".join(random.choice(op)for i in range(1)))
-    os = ok+ok+ok +'_'+ok+on
+    os = ok+ok+ok +ok +ok+on
     oa = requests.get(f'https://t.me/{os}').text
     if 'tgme_username_link' in oa:
         print(f'\r [{kn}] : DonE  ')
